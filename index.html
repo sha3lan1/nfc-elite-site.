@@ -1,475 +1,239 @@
+
 <!doctype html>
-
 <html lang="ar" dir="rtl">
-
 <head>
-
 <meta charset="utf-8">
-
 <meta name="viewport" content="width=device-width,initial-scale=1">
-
 <meta name="theme-color" content="#090909">
-
 <meta name="description" content="NFC ELITE — كروت وستاندات وأساور NFC بتصميم أنيق في الأردن.">
-
 <title>NFC ELITE — Smart, by touch</title>
-
 <style>
-
 :root{--bg:#080909;--panel:#121313;--gold:#c9a96e;--gold2:#f0dcb0;--text:#f7f4ed;--muted:#b0aaa0;--line:#c9a96e35}
-
 *{box-sizing:border-box}
-
 html{scroll-behavior:smooth;scroll-padding-top:80px}
-
 body{margin:0;background:radial-gradient(ellipse at 80% 0%,#c9a96e12,transparent 35%),var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;line-height:1.7}
-
 a{color:inherit;text-decoration:none}
-
 .wrap{width:min(1120px,90%);margin:auto}
-
 .topline{height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-
 .nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
-
 .brand{font-size:22px;font-weight:900;letter-spacing:2px;direction:ltr;white-space:nowrap}
-
 .brand span{color:var(--gold)}
-
 .navlinks{display:flex;align-items:center;gap:22px;color:#c9c3b9;font-size:13px}
-
 .nav-cta{border:1px solid var(--line);padding:8px 15px;border-radius:99px;color:var(--gold2)}
-
 .hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:65px 0}
-
 .eyebrow{font-size:11px;color:var(--gold);letter-spacing:3px;font-weight:800}
-
 .hero h1{font-size:clamp(43px,6vw,76px);line-height:1.12;letter-spacing:-1.8px;margin:16px 0;font-weight:950}
-
 .hero h1 em{font-style:normal;color:var(--gold2)}
-
 .hero p{font-size:16px;color:var(--muted);line-height:2;max-width:500px}
-
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:99px;font-size:13px;font-weight:800;border:1px solid var(--line);transition:.25s}
-
 .btn:hover{transform:translateY(-3px);border-color:var(--gold)}
-
 .primary{background:var(--gold);color:#17130c;box-shadow:0 8px 28px #c9a96e20}
-
 .primary:hover{background:var(--gold2)}
-
 .secondary{background:#ffffff05}
-
 .trust{font-size:12px;color:#918b80;margin-top:20px}
-
 .hero-art{height:420px;border:1px solid var(--line);border-radius:28px;overflow:hidden;position:relative;background:#171715;box-shadow:0 20px 70px #0008;animation:glow 5s ease-in-out infinite}
-
 .hero-art img{width:100%;height:100%;object-fit:cover;opacity:.76;filter:saturate(.7)}
-
 .hero-art:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#080909)}
-
 .hero-copy{position:absolute;z-index:1;bottom:25px;right:25px}
-
 .hero-copy strong{display:block;font-size:27px;direction:ltr}
-
 .hero-copy span{font-size:11px;letter-spacing:2px;color:var(--gold2)}
-
 .section{padding:55px 0}
-
 .section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}
-
 .section-head h2{font-size:clamp(29px,4vw,44px);margin:6px 0 0;font-weight:950}
-
 .section-head p{max-width:360px;color:var(--muted);font-size:13px}
-
 .gold-line{height:2px;width:48px;background:var(--gold);margin-top:12px}
-
 .products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-
 .product{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:linear-gradient(145deg,#171818,#0d0e0e);transition:transform .35s,box-shadow .35s,border-color .35s}
-
 .product:hover{transform:translateY(-6px);border-color:#c9a96e99;box-shadow:0 25px 60px #0009}
-
 .product-photo{height:270px;position:relative;background:radial-gradient(ellipse at center,#2b2923,#101111 72%);overflow:hidden}
-
 .product-photo img{width:100%;height:100%;object-fit:contain;padding:12px;transition:transform .6s;filter:brightness(.98)}
-
 .product:hover img{transform:scale(1.06)}
-
 .pill{position:absolute;top:14px;right:14px;z-index:2;padding:7px 12px;border-radius:99px;background:#090a0aeb;border:1px solid #c9a96e99;color:var(--gold2);font-size:12px;font-weight:800}
-
 .product-body{padding:20px 22px 22px}
-
 .product h3{font-size:22px;margin:0 0 6px;font-weight:900}
-
 .product p{font-size:13px;color:var(--muted);margin:0 0 18px;line-height:1.9}
-
 .product-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-
 .price{font-size:25px;font-weight:950;color:var(--gold2);direction:ltr}
-
 .price small{font-size:11px;color:#d4c5a7}
-
 .order-link{font-size:12px;color:var(--gold2);font-weight:800}
-
 .note{font-size:10px;color:#77736b;margin-top:15px}
-
 .story{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:center;padding:28px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(120deg,#151616,#0c0d0d)}
-
 .story-img{height:270px;overflow:hidden;border-radius:17px}
-
 .story-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.78) saturate(.7)}
-
 .story h2{font-size:clamp(27px,4vw,41px);line-height:1.25;margin:10px 0}
-
 .story h2 span{color:var(--gold2)}
-
 .story p{font-size:14px;color:var(--muted);line-height:2}
-
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
-
 .feature{padding:13px;border:1px solid var(--line);border-radius:13px}
-
 .feature b{display:block;color:var(--gold2);font-size:12px}
-
 .feature span{font-size:10px;color:var(--muted)}
-
 .cta{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:32px;border:1px solid #c9a96e66;border-radius:25px;background:radial-gradient(ellipse at 90% 0%,#c9a96e17,transparent 45%),#111212}
-
 .cta h2{font-size:clamp(27px,4vw,38px);margin:7px 0}
-
 .cta p{color:var(--muted);font-size:13px;margin:0}
-
 .cta .actions{margin:0}
-
 .owners{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:20px 0;border-bottom:1px solid var(--line);margin-top:22px}
-
 .owner-names{font-size:12px;color:var(--gold2);direction:ltr;text-align:right;margin-top:5px}
-
 .socials{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#c5beb2}
-
 .socials a:hover{color:var(--gold2)}
-
 footer{padding:24px 0 32px;color:#77736b;font-size:11px}
-
 .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-
 .foot .brand{font-size:16px}
-
 @keyframes glow{0%,100%{box-shadow:0 20px 70px #0008}50%{box-shadow:0 20px 70px #0008,0 0 30px #c9a96e12}}
-
 @media(max-width:760px){
-
 .navlinks{gap:12px;font-size:11px}
-
 .navlinks a:nth-child(2){display:none}
-
 .brand{font-size:18px}
-
 .hero{grid-template-columns:1fr;gap:25px;padding:38px 0}
-
 .hero-art{height:320px;order:-1}
-
 .hero h1{font-size:clamp(43px,11vw,62px)}
-
 .section{padding:40px 0}
-
 .section-head{display:block}
-
 .section-head p{margin-top:8px}
-
 .products{grid-template-columns:1fr}
-
 .product-photo{height:260px}
-
 .story{grid-template-columns:1fr;padding:18px;gap:22px}
-
 .story-img{height:220px}
-
 .features{grid-template-columns:1fr}
-
 .cta{display:block;padding:25px}
-
 .cta .actions{margin-top:20px}
-
 .cta .btn{flex:1}
-
 .socials{flex-direction:column;gap:8px}
-
 }
-
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-
 </style>
-
 </head>
-
 <body>
-
 <div class="topline"></div>
-
 <header class="wrap">
-
 <nav class="nav">
-
 <a class="brand" href="#top">NFC <span>ELITE</span></a>
-
 <div class="navlinks">
-
 <a href="#products">المنتجات</a>
-
 <a href="#story">عن التقنية</a>
-
 <a class="nav-cta" href="#contact">اطلب الآن ↗</a>
-
 </div>
-
 </nav>
-
 </header>
-
 <main id="top">
-
 <section class="wrap hero">
-
 <div>
-
 <div class="eyebrow">SMART CONNECTION · JORDAN</div>
-
 <h1>حضورك أقوى،<br><em>بلمسة واحدة.</em></h1>
-
 <p>خلّي أول انطباع عنك أذكى. كروت وستاندات وأساور NFC تساعدك تشارك روابطك ومعلوماتك بطريقة عصرية وأنيقة.</p>
-
 <div class="actions">
-
 <a class="btn primary" href="#products">اكتشف المجموعة ↙</a>
-
 <a class="btn secondary" href="#contact">تواصل معنا ↗</a>
-
 </div>
-
 <div class="trust">● حلول ذكية للأفراد والأعمال في الأردن</div>
-
 </div>
-
 <div class="hero-art">
-
 <img src="https://images.pexels.com/photos/4466115/pexels-photo-4466115.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="بطاقات أعمال بتصميم أنيق">
-
 <div class="hero-copy"><strong>NFC ELITE</strong><span>TAP. CONNECT. IMPRESS.</span></div>
-
 </div>
-
 </section>
-
 <section class="section" id="products">
-
 <div class="wrap">
-
 <div class="section-head">
-
 <div><div class="eyebrow">THE COLLECTION</div><h2>تقنية تليق بحضورك</h2><div class="gold-line"></div></div>
-
 <p>منتجات ذكية تساعدك تترك انطباعًا مختلفًا — للأفراد والمحلات والأعمال.</p>
-
 </div>
-
 <div class="products">
-
 <article class="product">
-
 <div class="product-photo">
-
 <span class="pill">كرت NFC</span>
-
 <img loading="lazy" src="https://images.pexels.com/photos/4466104/pexels-photo-4466104.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="كرت أعمال أنيق">
-
 <span class="pill" style="top:auto;right:auto;bottom:14px;left:14px">10 دنانير</span>
-
 </div>
-
 <div class="product-body">
-
 <h3>كرت NFC</h3>
-
 <p>شارك حساباتك ومعلوماتك بلمسة واحدة، بتصميم أنيق يناسبك أو يناسب نشاطك التجاري.</p>
-
 <div class="product-bottom"><span class="price">10 <small>د.أ</small></span><a class="order-link" data-product="كرت NFC" href="#contact">اطلب كرتك ↗</a></div>
-
 </div>
-
 </article>
-
 <article class="product">
-
 <div class="product-photo">
-
 <span class="pill">كرت NFC بتصميم مميز</span>
-
 <img loading="lazy" src="https://images.pexels.com/photos/10932011/pexels-photo-10932011.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="بطاقات أعمال بتصميم راقٍ">
-
 <span class="pill" style="top:auto;right:auto;bottom:14px;left:14px">10 دنانير</span>
-
 </div>
-
 <div class="product-body">
-
 <h3>كرت NFC بتصميم مميز</h3>
-
 <p>خيار أنيق لمشاركة بياناتك وروابطك بسرعة، مع إمكانية تخصيص التصميم حسب المتاح.</p>
-
 <div class="product-bottom"><span class="price">10 <small>د.أ</small></span><a class="order-link" data-product="كرت NFC بتصميم مميز" href="#contact">اطلب كرتك ↗</a></div>
-
 </div>
-
 </article>
-
 <article class="product">
-
 <div class="product-photo">
-
 <span class="pill">ستاند NFC</span>
-
 <img loading="lazy" src="https://cdn.salla.sa/dPoODo/44bb6ae3-6955-403c-b757-c8c6916a0491-1000x1000-BNMtAaWJMhRCb19e1WPujGPDFPS9anTc4mgb9L6e.png" alt="ستاند NFC للطاولة لفتح الروابط">
-
 <span class="pill" style="top:auto;right:auto;bottom:14px;left:14px">السعر عند الطلب</span>
-
 </div>
-
 <div class="product-body">
-
 <h3>ستاند NFC للطاولة</h3>
-
 <p>ضعه على الكاونتر أو الطاولة؛ يفتح صفحة روابطك باللمس أو عبر QR. مناسب للمحلات والكافيهات.</p>
-
 <div class="product-bottom"><a class="order-link" data-product="ستاند NFC للطاولة" href="#contact">اطلب الستاند ↗</a></div>
-
 </div>
-
 </article>
-
 <article class="product">
-
 <div class="product-photo">
-
 <span class="pill">سوار NFC سيليكون</span>
-
 <img loading="lazy" src="https://www.rfidsilicone.com/uploadfile/2023/11/24/20231124181853WgOZwK.webp" alt="سوار سيليكون NFC">
-
 <span class="pill" style="top:auto;right:auto;bottom:14px;left:14px">10 دنانير</span>
-
 </div>
-
 <div class="product-body">
-
 <h3>سوار NFC سيليكون</h3>
-
 <p>سوار قابل للارتداء مع شريحة NFC لمشاركة رابطك أو حساباتك من هاتف متوافق.</p>
-
 <div class="product-bottom"><span class="price">10 <small>د.أ</small></span><a class="order-link" data-product="سوار NFC سيليكون" href="#contact">اطلب سوارك ↗</a></div>
-
 </div>
-
 </article>
-
 </div>
-
 <p class="note">صور السوار والستاند من صفحات منتجات مرجعية، وقد تختلف التفاصيل حسب اللون والتخصيص المتاح.</p>
-
 </div>
-
 </section>
-
 <section class="section" id="story">
-
 <div class="wrap story">
-
 <div class="story-img"><img loading="lazy" src="https://images.pexels.com/photos/7318929/pexels-photo-7318929.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="بطاقة أعمال على حامل مكتبي"></div>
-
 <div>
-
 <div class="eyebrow">LESS FRICTION. MORE CONNECTION.</div>
-
 <h2>وداعًا للتفاصيل المعقدة.<br><span>مرحبًا باللمسة الذكية.</span></h2>
-
 <p>تقنية NFC تتيح للأجهزة المتوافقة فتح رابط أو مشاركة معلومة عند تقريب الهاتف من المنتج. تجربة بسيطة، مظهر راقٍ، وتواصل أسرع مع عملائك.</p>
-
 <div class="features">
-
 <div class="feature"><b>01 / بسيط</b><span>قرّب الهاتف وافتح الرابط</span></div>
-
 <div class="feature"><b>02 / أنيق</b><span>تصميم يناسب هويتك</span></div>
-
 <div class="feature"><b>03 / عملي</b><span>للأفراد والأعمال</span></div>
-
 </div>
-
 </div>
-
 </div>
-
 </section>
-
 <section class="wrap" id="contact">
-
 <div class="cta">
-
 <div><div class="eyebrow">LET'S CONNECT</div><h2>خلّينا نجهز طلبك.</h2><p>راسلنا للاستفسار عن التصاميم والأسعار والتخصيص والتوصيل داخل الأردن.</p></div>
-
 <div class="actions">
-
 <a class="btn primary" id="whatsappButton" href="https://wa.me/962788191900" target="_blank" rel="noopener noreferrer">اطلب عبر واتساب ↗</a>
-
 <a class="btn secondary" href="https://www.instagram.com/nfc__elite/" target="_blank" rel="noopener noreferrer">إنستغرام ↗</a>
-
 </div>
-
 </div>
-
 <div class="owners">
-
 <div><strong>OWNERS</strong><div class="owner-names">SHALAN KJ · AHMAD ALAFGHANI</div></div>
-
 <div class="socials">
-
 <a href="https://wa.me/962788191900" target="_blank" rel="noopener noreferrer">WhatsApp · +962 788 191 900</a>
-
 <a href="https://www.instagram.com/nfc__elite/" target="_blank" rel="noopener noreferrer">Instagram · @nfc__elite</a>
-
 </div>
-
 </div>
-
 </section>
-
 </main>
-
 <footer><div class="wrap foot"><div class="brand">NFC <span>ELITE</span></div><div>تقنية ذكية. انطباع يدوم.</div><div>© <span id="year"></span> NFC ELITE</div></div></footer>
-
 <script>
-
 const number='962788191900';
-
 document.getElementById('year').textContent=new Date().getFullYear();
-
 function waUrl(product='منتجات NFC'){
-
 return 'https://wa.me/'+number+'?text='+encodeURIComponent('مرحبًا NFC ELITE، أريد الاستفسار عن '+product+'.');
-
 }
-
 document.getElementById('whatsappButton').href=waUrl();
-
 document.querySelectorAll('.order-link').forEach(a=>a.addEventListener('click',()=>{
-
 document.getElementById('whatsappButton').href=waUrl(a.dataset.product||'منتجات NFC');
-
 }));
-
 </script>
-
 </body>
-
 </html>
